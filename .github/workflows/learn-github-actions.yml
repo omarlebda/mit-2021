@@ -35,7 +35,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run passing-test
       run: |
-        - python3 -m unittest test.Test.pass_test
+        python3 -m unittest test.Test.pass_test
  test2:
     needs: build
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run failed-test
       run: |
-        - python3 -m unittest test.Test.fail_test
+        python3 -m unittest test.Test.fail_test
  deploy:
     needs: [test1, test2]
     runs-on: ubuntu-latest
